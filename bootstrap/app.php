@@ -25,7 +25,7 @@ $app = new Laravel\Lumen\Application(
 
 // $app->withFacades();
 
-// $app->withEloquent();
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -112,6 +112,9 @@ $app->router->group([
     require __DIR__.'/../routes/web.php';
 });
 
+/*
+/  Register Generator
+*/
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 
 return $app;
